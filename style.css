@@ -1,93 +1,133 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    height: 100%;
-    background-color: red;
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  /*font-family: "Roboto Condensed", sans-serif;*/
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to right bottom,
+    #0e4bef,
+    darkred,
+    gold,
+    green,
+    rgba(128, 128, 128, 0.4)
+  );
+  background-repeat: none;
+  background-attachment: fixed;
 }
 
-.container{
-    width: 40%;
-    min-width: 450px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    background-color: white;
-    min-height: 100px;
-    border-radius: 10px;
+h1 {
+  margin: 20px;
 }
 
-#newtask{
-    position: relative;
-    padding: 30px 20px;
+.container__todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 600px;
+  width: 300px;
+  background-color: rgba(121, 164, 164, 0.431);
+  border: 2px solid grey;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.514);
+  padding: 20px;
 }
-#newtask input{
-    width: 75%;
-    height: 45px;
-    font-family: 'poppins', sans-serif;
-    font-size: 15px;
-    border: 2px solid #d1d3d4;
-    padding: 12px;
-    color: #111111;
-    font-weight: 500;
-    position: relative;
-    border-radius: 5px;
+
+.date {
+  width: 100px;
 }
-#newtask input:focus{
-    outline: none;
-    border-color: #0d75ec;
+
+.input,
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
 }
-#newtask button{
-    position: relative;
-    float: right;
-    width: 20%;
-    height: 45px;
-    border-radius: 5px;
-    font-family: 'poppins', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    background-color: #0d75ec;
-    border: none;
-    color: white;
-    outline: none;
+
+.inputField {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
-#tasks{
-    background-color: #c5e1e6;
-    padding: 30px 20px;
-    margin-top: 10px;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
+
+.addNewItem {
+  width: 50px;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
 }
-#task{
-    background-color: #c5e1e6;
-    height: 50px;
-    margin-bottom: 8px;
-    padding: 5px 10px;
-    display: flex;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #939697;
-    cursor: pointer;
+
+.button__delete {
+  color: red;
+  width: 25px;
+  border-radius: 5px;
+  border: none;
+  visibility: hidden;
 }
-.task span{
-    font-family: 'poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+
+.pending,
+.completed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
 }
-.task button{
-    background: #0a2ea4;
-    color: white;
-    height: 100%;
-    width: 40px;
-    height: 100%;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    outline: none;
+
+.container__pendingItems,
+.container__completedItems {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
 }
+
+.pendingItem,
+.completedItem {
+  background-color: rgba(96, 101, 101, 0.468);
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.item_content {
+  width: 100%;
+}
+
+.buttons > button {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+button:hover {
+  background-color: lightpink;
+  color: white;
+}
+
+.rainbow {
+  /* display: none;*/
+  margin: auto;
+  font-size: 64px;
+}
+

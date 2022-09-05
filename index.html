@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-</head>
-<body>
-    <div class="container">
-        <div id="newtask">
-            <input type="text" placeholder="Task to be done ...">
-            <button id="push">ADD</button>
-        </div>
-        <div id="tasks"></div>
-    </div>
-    <div id="task">
-        <span id="taskname"></span>
-    <button class="delete">
-        <i class="far fa-trash-all"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <title>Todo</title>
+  </head>
+  <body>
+    <h1>To-Do 🦄</h1>
+    <div class="container__todo">
+      <div class="date">Placeholder: 2022.09.04 - Sunday</div>
+      <div class="input">
+        <input
+          class="inputField"
+          type="text"
+          placeholder="Take the trash out"
+          maxlength="25"
+          minlength="1"
+          required
+        />
+        <button class="addNewItem">
+          <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
-        </div>
+      </div>
 
+      <div class="pending">
+        <div class="pendingCounter"></div>
+        <div class="rainbow"></div>
+        <div class="container__pendingItems"></div>
+      </div>
+      <div class="completed">
+        <div class="completedCounter"></div>
+        <div class="container__completedItems"></div>
+      </div>
+
+      <div class="buttons">
+        <button class="hideShow">Hide Completed</button>
+        <button class="clear">Clear All</button>
+      </div>
+    </div>
     <script src="main.js"></script>
-    
-</body>
+  </body>
 </html>
